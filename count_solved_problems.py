@@ -69,6 +69,7 @@ def count_solved_problems(root):
 
 def update_readme(counts, readme_path):
     df = pd.DataFrame(counts).fillna(0).astype(int).T
+    df.loc['합계'] = df.sum()
     table = df.to_markdown()
     
     with open(readme_path, 'w') as readme_file:

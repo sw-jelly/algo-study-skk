@@ -40,22 +40,31 @@ INVALID = 'invalid'
 
 def count_solved_problems(root):
     result = {}
-    
+
     for algorithm in os.listdir(root):
         algorithm_path = os.path.join(root, algorithm)
-        if os.path.isdir(algorithm_path):
-            for problem in os.listdir(algorithm_path):
-                problem_path = os.path.join(algorithm_path, problem)
-                if os.path.isdir(problem_path):
-                    for solver in os.listdir(problem_path):
-                        solver_name = name_map.get(solver.split('_')[-1], INVALID)
-                        algorithm_name = algorithm_map.get(algorithm, algorithm)
-                        if algorithm_name not in result:
-                            result[algorithm_name] = {}
-                        if solver_name != INVALID:
-                            if solver_name not in result[algorithm_name]:
-                                result[algorithm_name][solver_name] = 0
-                            result[algorithm_name][solver_name] += 1
+
+        if not os.path.isdir(algorithm_path) or algorithm in {'.git', '.github'}:
+            continue
+
+        for problem in os.listdir(algorithm_path):
+            problem_path = os.path.join(algorithm_path, problem)
+            if not os.path.isdir(problem_path):
+                continue
+
+            for solver in os.listdir(problem_path):
+                solver_path = os.path.join(problem_path, solver)
+                if os.path.isfile(solver_path) and (solver_path.endswith('.java') or solver_path.endswith('.py')):
+                    solver_initial = os.path.splitext(solver)[0].split('_')[-1]
+                    solver_name = name_map.get(solver_initial, INVALID)
+                    algorithm_name = algorithm_map.get(algorithm, algorithm)
+                    if algorithm_name not in result:
+                        result[algorithm_name] = {}
+                    if solver_name != INVALID:
+                        if solver_name not in result[algorithm_name]:
+                            result[algorithm_name][solver_name] = 0
+                        result[algorithm_name][solver_name] += 1
+
     return result
 
 def update_readme(counts, readme_path):
@@ -64,7 +73,7 @@ def update_readme(counts, readme_path):
     
     with open(readme_path, 'w') as readme_file:
         readme_file.write('# 알고리즘 스터디 송곳갱 \n\n')
-        readme_file.write('## 알고리즘 별 문제풀이 현황 \n')
+        readme_file.write('### 알고리즘 유형 별 현황표 \n\n')
         readme_file.write(table)
 
 if __name__ == '__main__':

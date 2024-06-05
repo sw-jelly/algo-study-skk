@@ -25,7 +25,7 @@ jobs:
 
     - name: Run script
       run: |
-        python count_solutions.py
+        python count_solved_problems.py
 
     - name: Commit and push changes
       run: |

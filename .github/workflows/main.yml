@@ -1,0 +1,38 @@
+name: Update README.md
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas
+
+    - name: Run script
+      run: |
+        python count_solved_problems.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "gosjorb@gmail.com"
+        git config --local user.name "sw-jelly"
+        git add README.md
+        git commit -m "Update README.md"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

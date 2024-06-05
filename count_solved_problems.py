@@ -76,7 +76,6 @@ def update_readme(counts, readme_path):
     df.index = df.index.map(lambda x: f'**{x}**' if x == SUM else x)
     
     table = df.to_markdown()
-    table = table.replace('총 합', '**총 합**')
     
     with open(readme_path, 'w') as readme_file:
         readme_file.write('# 알고리즘 스터디 송곳갱 \n\n')

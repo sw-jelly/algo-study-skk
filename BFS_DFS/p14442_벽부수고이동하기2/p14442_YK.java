@@ -1,3 +1,5 @@
+package p14442_벽부수고이동하기2;
+
 import java.io.*;
 import java.util.*;
 

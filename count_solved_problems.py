@@ -1,5 +1,5 @@
 import os
-import pandas as import pd;
+import pandas as pd
 
 name_map = {
     "SA": "권송아",

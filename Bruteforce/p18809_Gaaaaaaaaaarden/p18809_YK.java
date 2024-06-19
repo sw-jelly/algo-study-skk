@@ -1,4 +1,4 @@
-package BruteForce.p18809_Gaaaaaaaaaarden;
+package Bruteforce.p18809_Gaaaaaaaaaarden;
 
 import java.io.*;
 import java.util.*;

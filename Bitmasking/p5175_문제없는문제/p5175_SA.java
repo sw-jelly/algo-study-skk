@@ -3,7 +3,7 @@ package Bitmasking.p5175_문제없는문제;
 import java.util.*;
 import java.io.*;
 
-public class p5174_SA {
+public class p5175_SA {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int K, M, N;

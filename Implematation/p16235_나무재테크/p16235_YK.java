@@ -1,4 +1,4 @@
-package PrefixSum.p2616_나무재테크;
+package Implematation.p16235_나무재테크;
 
 import java.io.*;
 import java.util.*;

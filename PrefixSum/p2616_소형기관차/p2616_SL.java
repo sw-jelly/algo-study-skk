@@ -6,7 +6,7 @@ import java.io.*;
 public class p2616_SL {
 
     static int N, M;
-    static int[] people, prifixSum;
+    static int[] people, prefixSum;
     static int[][] dp;
 
     public static void main(String[] args) throws Exception {
@@ -15,12 +15,12 @@ public class p2616_SL {
 
         N = Integer.parseInt(st.nextToken());
         people = new int[N+1];
-        prifixSum = new int[N+1];
+        prefixSum = new int[N+1];
 
         st = new StringTokenizer(br.readLine());
         for (int i = 1; i <= N; i++) {
             people[i] = Integer.parseInt(st.nextToken());
-            prifixSum[i] = prifixSum[i-1] + people[i];
+            prefixSum[i] = prefixSum[i-1] + people[i];
         }
 
         M = Integer.parseInt(br.readLine());
@@ -32,7 +32,7 @@ public class p2616_SL {
             for (int j = i*M; j <= N; j++) {
                 dp[i][j] = Math.max(
                     dp[i][j-1],
-                    dp[i-1][j-M] + prifixSum[j] - prifixSum[j-M]
+                    dp[i-1][j-M] + prefixSum[j] - prefixSum[j-M]
                 );
             }
         }

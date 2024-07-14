@@ -3,7 +3,7 @@ package Bitmasking.p5175_문제없는문제;
 import java.io.*;
 import java.util.*;
 
-public class p5174_YK {
+public class p5175_YK {
 
     static int M, N, selectedAlgos, result, minCnt;
     static int[] problems;

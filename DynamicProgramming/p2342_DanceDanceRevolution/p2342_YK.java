@@ -5,10 +5,7 @@ import java.util.*;
 
 public class p2342_YK {
 
-    // dp에 뭘 저장할 것이냐???
-    // dp[왼발][오른발][현재 인덱스]
-
-    static int N, result = Integer.MAX_VALUE;
+    static int N;
     static List<Integer> ddr;
     static int[][][] dp;
     static int[][] move = {

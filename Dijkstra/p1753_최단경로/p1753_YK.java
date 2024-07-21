@@ -66,8 +66,8 @@ public class p1753_YK {
             if (dist[now.v] < now.w) continue;
 
             for (Node next : list[now.v]) {
-                if (dist[next.v] > now.w + next.w) {
-                    dist[next.v] = now.w + next.w;
+                if (dist[next.v] > dist[now.v] + next.w) {
+                    dist[next.v] = dist[now.v] + next.w;
                     pq.add(new Node(next.v, dist[next.v]));
                 }
             }

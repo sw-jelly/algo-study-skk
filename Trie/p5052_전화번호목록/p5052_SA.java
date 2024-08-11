@@ -1,7 +1,9 @@
+package Trie.p5052_전화번호목록;
+
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class p5052_SA {
     
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();

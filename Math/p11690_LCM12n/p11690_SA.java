@@ -1,7 +1,9 @@
-import java.util.*;
-import java.io.*;
+package Math.p11690_LCM12n;
 
-public class Main {
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class p11690_SA {
     
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int n;

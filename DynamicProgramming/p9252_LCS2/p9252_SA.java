@@ -1,7 +1,9 @@
+package DynamicProgramming.p9252_LCS2;
+
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class p9252_SA {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();

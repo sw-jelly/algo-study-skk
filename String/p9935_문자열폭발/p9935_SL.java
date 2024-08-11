@@ -3,7 +3,7 @@ package String.p9935_문자열폭발;
 import java.util.*;
 import java.io.*;
 
-public class p9935_문자열폭발_SL {
+public class p9935_SL {
 
     public static void main(String[] args) throws Exception {
 

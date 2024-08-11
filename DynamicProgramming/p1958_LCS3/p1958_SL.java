@@ -2,7 +2,7 @@ package DynamicProgramming.p1958_LCS3;
 
 import java.io.*;
 
-public class p1958_LCS3_SL {
+public class p1958_SL {
 
     static char[] s1, s2, s3;
     static int a, b, c;

@@ -1,9 +1,10 @@
-package DynamicProgramming.p9592_LCS2;
+package DynamicProgramming.p9252_LCS2;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Stack;
 
-public class p9592_LCS2_SL {
+public class p9252_SL {
 
     public static void main(String[] args) throws Exception {
 

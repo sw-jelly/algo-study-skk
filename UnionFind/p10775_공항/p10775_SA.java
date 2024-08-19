@@ -1,7 +1,9 @@
+package UnionFind.p10775_공항;
+
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class p10775_SA {
     
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int G, P;

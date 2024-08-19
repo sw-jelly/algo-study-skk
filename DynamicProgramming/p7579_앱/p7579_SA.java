@@ -1,7 +1,9 @@
+package DynamicProgramming.p7579_앱;
+
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class p7579_SA {
     
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int N, M;

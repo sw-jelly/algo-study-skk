@@ -1,7 +1,9 @@
+package Greedy.p13164_행복유치원;
+
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class p13164_SA {
     
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int N, K;
